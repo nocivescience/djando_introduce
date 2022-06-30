@@ -17,4 +17,4 @@ def generate_password(request):
     length = int(request.GET.get('length', 12))
     for x in range(length):
         generate_password += np.random.choice(characters)
-    return render(request, 'generator/password.html', {'': generate_password})
+    return render(request, 'generator/password.html', {'password': generate_password})
